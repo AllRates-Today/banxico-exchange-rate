@@ -1,6 +1,6 @@
 {
   "name": "banxico-exchange-rate",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Official Banco de México (Mexico) daily exchange rates — 4 currencies vs MXN, history since 1993. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "banxico",
