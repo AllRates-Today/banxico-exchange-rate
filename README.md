@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'MXN', { apiKey: 'art_live_...' });
 {
   bank: 'banxico',
   name: 'Banco de México',
-  rate_date: '2026-08-10',   // Banco de México's own publication date
+  rate_date: '2026-09-08',   // Banco de México's own publication date
   source: 'USD',
   target: 'MXN',
-  rate: 17.1408,
+  rate: 16.9202,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -98,10 +98,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'banxico',
   name: 'Banco de México',
-  rate_date: '2026-08-10',
+  rate_date: '2026-09-08',
   rates: [
-    { "base": "USD", "quote": "MXN", "type": "reference", "value": 17.1408 },
-    { "base": "USD", "quote": "MXN", "type": "close", "value": 17.1414 },
+    { "base": "USD", "quote": "MXN", "type": "reference", "value": 16.9202 },
+    { "base": "USD", "quote": "MXN", "type": "close", "value": 16.9138 },
     // … the rest of the published table (4 currencies vs MXN)
   ],
   disclaimer: '…'
@@ -141,7 +141,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'banxico-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'MXN', from: '2026-01-01', to: '2026-08-10' },
+  { source: 'USD', target: 'MXN', from: '2026-01-01', to: '2026-09-08' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -154,11 +154,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'MXN',
   from: '2026-01-01',
-  to: '2026-08-10',
+  to: '2026-09-08',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-10', rate: 17.1408, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-08', rate: 16.9202, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -171,9 +171,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Banco de México currently publishes rates covering **5 currencies** (as of the latest table):
+Banco de México currently publishes rates covering **4 currencies** against the MXN (as of the latest table):
 
-`CAD` · `EUR` · `JPY` · `MXN` · `USD`
+🇨🇦 `CAD` · 🇪🇺 `EUR` · 🇯🇵 `JPY` · 🇺🇸 `USD`
 
 ## ⚖️ Published vs derived rates
 
@@ -236,6 +236,14 @@ getRate('USD', 'MXN', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 1993 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/banxico.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/banxico/latest.json`
 
 ## 🔗 Links
 
