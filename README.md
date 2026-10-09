@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/banxico-exchange-rate.svg)](https://github.com/AllRates-Today/banxico-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/banxico-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![USD/MXN today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fbanxico%3Fsource%3DUSD%26target%3DMXN&query=%24.rate&label=USD%2FMXN%20published%20by%20Banco%20de%20M%C3%A9xico&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/banxico/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fbanxico%3Fsource%3DUSD%26target%3DMXN&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/banxico/)
 
 **Official Banco de México (Mexico) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Banco de México itself prints, every business day.**
 
@@ -32,6 +34,24 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Banco de México table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-10-08** by Banco de México — 5 rates. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| CAD | MXN | informational | 12.7113 |
+| EUR | MXN | informational | 20.2546 |
+| JPY | MXN | informational | 0.1145 |
+| USD | MXN | close | 18.2025 |
+| USD | MXN | reference | 18.1128 |
+
+Source: [Official rates published by BANXICO, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/banxico/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 
