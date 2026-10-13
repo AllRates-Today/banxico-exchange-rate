@@ -42,14 +42,14 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-09** by Banco de México — 4 rates. Updated 2026-10-12.
+Published **2026-10-12** by Banco de México — 4 rates. Updated 2026-10-13.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| EUR | MXN | informational | 20.6419 |
-| JPY | MXN | informational | 0.1163 |
-| USD | MXN | close | 18.4111 |
-| USD | MXN | reference | 18.4163 |
+| EUR | MXN | informational | 20.3954 |
+| JPY | MXN | informational | 0.115 |
+| USD | MXN | close | 18.2628 |
+| USD | MXN | reference | 18.2542 |
 
 Source: [Official rates published by BANXICO, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/banxico/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
