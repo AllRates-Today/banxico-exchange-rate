@@ -42,7 +42,7 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-13** by Banco de México — 4 rates. Updated 2026-10-13.
+Published **2026-10-13** by Banco de México — 4 rates. Updated 2026-10-14.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
@@ -106,10 +106,10 @@ const pair = await getRate('USD', 'MXN', { apiKey: 'art_live_...' });
 {
   bank: 'banxico',
   name: 'Banco de México',
-  rate_date: '2026-10-09',   // Banco de México's own publication date
+  rate_date: '2026-10-13',   // Banco de México's own publication date
   source: 'USD',
   target: 'MXN',
-  rate: 18.4163,
+  rate: 18.3528,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -134,10 +134,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'banxico',
   name: 'Banco de México',
-  rate_date: '2026-10-09',
+  rate_date: '2026-10-13',
   rates: [
-    { "base": "USD", "quote": "MXN", "type": "reference", "value": 18.4163 },
-    { "base": "USD", "quote": "MXN", "type": "close", "value": 18.4111 },
+    { "base": "USD", "quote": "MXN", "type": "reference", "value": 18.3528 },
+    { "base": "USD", "quote": "MXN", "type": "close", "value": 18.3771 },
     // … the rest of the published table (4 currencies vs MXN)
   ],
   disclaimer: '…'
@@ -177,7 +177,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'banxico-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'MXN', from: '2026-01-01', to: '2026-10-09' },
+  { source: 'USD', target: 'MXN', from: '2026-01-01', to: '2026-10-13' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -190,11 +190,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'MXN',
   from: '2026-01-01',
-  to: '2026-10-09',
+  to: '2026-10-13',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-10-09', rate: 18.4163, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-10-13', rate: 18.3528, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
