@@ -1,6 +1,6 @@
 {
   "name": "banxico-exchange-rate",
-  "version": "1.3.18",
+  "version": "1.3.19",
   "description": "Official Banco de México (Mexico) daily exchange rates — 4 currencies vs MXN, history since 1993. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "banxico",
@@ -26,7 +26,17 @@
     "central-bank",
     "official-rates",
     "api",
-    "typescript"
+    "typescript",
+    "money",
+    "convert",
+    "conversion",
+    "exchange",
+    "rate",
+    "accounting",
+    "utilities",
+    "number",
+    "cart",
+    "ecommerce"
   ],
   "homepage": "https://allratestoday.com/central-bank-rates-api/banxico/",
   "repository": {
