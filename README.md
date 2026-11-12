@@ -32,14 +32,14 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-10 by Banco de México — 4 rates. Updated 2026-11-11.</summary>
+<summary>Table as text: published 2026-11-11 by Banco de México — 4 rates. Updated 2026-11-12.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| EUR | MXN | informational | 20.9415 |
-| JPY | MXN | informational | 0.118 |
-| USD | MXN | close | 18.6185 |
-| USD | MXN | reference | 18.6678 |
+| EUR | MXN | informational | 20.7353 |
+| JPY | MXN | informational | 0.117 |
+| USD | MXN | close | 18.6191 |
+| USD | MXN | reference | 18.6192 |
 
 </details>
 
